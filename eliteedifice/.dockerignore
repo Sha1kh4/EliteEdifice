@@ -1,3 +1,9 @@
-.next
+Dockerfile
+.dockerignore
 node_modules
-.env
+npm-debug.log
+README.md
+.next
+!.next/static
+!.next/standalone
+.git
