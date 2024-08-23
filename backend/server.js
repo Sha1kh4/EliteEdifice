@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 4000;
 async function startServer() {
   const app = express();
   app.use(cors());
-
+  app.get("/", (req, res) => res.send("Express on Vercel"));
   const apolloServer = new ApolloServer({
     typeDefs,
     resolvers,
