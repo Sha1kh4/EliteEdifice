@@ -7,12 +7,12 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+        fromFile: .env
     dockerfilePath: ./backend/Dockerfile
     dockerContext: ./backend
     port: 4000
-    envVars:
-      - fromFile: .env
 
+    
   - type: web
     name: frontend
     env: node
