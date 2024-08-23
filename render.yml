@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    port: 4000
+    envVars:
+      - fromFile: .env
+
+  - type: web
+    name: frontend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    dockerfilePath: ./eliteedifice/Dockerfile
+    dockerContext: ./eliteedifice
+    port: 3000
