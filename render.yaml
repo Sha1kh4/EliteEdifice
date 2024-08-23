@@ -7,7 +7,6 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-    envVars:
       - fromFile: .env
 
   - type: web
