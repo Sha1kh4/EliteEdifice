@@ -6,6 +6,7 @@ services:
     startCommand: cd backend && npm start
     envVars:
       - key: NODE_ENV
+        value: production
       - fromFile: .env
 
   - type: web
@@ -15,3 +16,5 @@ services:
     startCommand: cd eliteedifice && npm start
     envVars:
       - key: NODE_ENV
+        fromfile: .env
+        value: production
