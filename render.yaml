@@ -2,22 +2,19 @@ services:
   - type: web
     name: backend
     env: node
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
     envVars:
       - key: NODE_ENV
         value: production
+    envVars:
       - fromFile: .env
-    dockerfilePath: ./backend/Dockerfile
-    dockerContext: ./backend
 
   - type: web
     name: frontend
     env: node
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: cd eliteedifice && npm install
+    startCommand: cd eliteedifice && npm start
     envVars:
       - key: NODE_ENV
         value: production
-    dockerfilePath: ./eliteedifice/Dockerfile
-    dockerContext: ./eliteedifice
